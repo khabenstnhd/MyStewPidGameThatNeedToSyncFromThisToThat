@@ -209,7 +209,7 @@ class SaharaGame:
                 self.current_prompt = path3
                 self.create_buttons(path3)
             else:
-                self.show_error("Invalid choice. Please select a valid option.") #go Fug yourself
+                self.show_error("Invalid choice. Please select a valid option.") #go Fug yourself, THERE IS 3 BUTTON, HOW TF U HAVE A FOURTH TO TRIGGER THE FUCKING ERROR. 
 
         # Round 2 (Path 1)
         elif self.current_prompt == path1:
