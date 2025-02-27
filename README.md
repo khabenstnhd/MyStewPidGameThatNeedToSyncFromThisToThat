@@ -18,7 +18,7 @@ Expect:
    ```
 2. Run the game:
    ```bash
-   python adventure.py
+   python Ben_AdventureGame.py
    ```
 3. Regret everything.
 
