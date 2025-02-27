@@ -5,6 +5,13 @@
 #Grammarly makes AI writing convenient. Work smarter with personalized AI guidance and text generation on any app or website.
 
 #lol u got ads in source code 
+#Note, i can't just give this crap 3 ending. 
+# because its will be cod, or whatever it is, so, 
+# follow the equation Scene^choice = ending. that would be a huge ass number
+# so If you have 5 scenes with 4 choices per scene, the equation would give:you 1024 ending. 
+# that could explain why Baldur's Gate 3 has 17,000 ending. but 4 major ending.
+# Yep, MAJOR ENDING. focus on Good Or Bad, or Shit ending. 
+# and the game has one good ending and one bad ending. best ending is 111 and worst ending is 122.
 text1 = "You stand at the edge of the scorching Sahara Desert. The wind whips sand around you, stinging your eyes. Legend speaks of the Lost Amulet of Zerzura, a powerful artifact hidden within a forgotten oasis. You, a seasoned explorer, are determined to find it. Before you lie three paths, shrouded in the swirling sands:"
 startpoint = """
 1. Head straight into the dunes, following the faint tracks of a long-dead caravan.
@@ -115,7 +122,7 @@ endings = {
     "2-2-1": "The youth leads you to a hidden cave where a band of thieves is hiding. They capture you. (Ending 13: Captured)",
     "2-2-2": "The youth is forced to confess. He reveals a false location for the Amulet, leading you on a wild goose chase. (Ending 14: Deception)",
     "2-2-3": "The Bedouins are angered by your distrust. They banish you from their camp. (Ending 15: Banishment)",
-    "2-3-1": "You wander east for days, eventually collapsing from dehydration. (Ending 16: Thirst's End)",
+    "2-3-1": "You wander east for days, eventually collapsing from dehydration. (Ending 16: Thirst's End)", 
     "2-3-2": "You stumble upon a small, abandoned well. You find water, but no sign of the Amulet. (Ending 17: Well of Hope)",
     "2-3-3": "You reach the rock formation again, but with renewed knowledge. You spot a different clue you missed before, leading you to a secret canyon...and the Amulet! But you are weak. (Ending 18: Almost There!)",
     "3-1-1": "The box contains a key and a small map. It leads to a hidden chamber in the ruined temple you saw from above! You almost there.(Ending 19: The Key)",
@@ -197,48 +204,49 @@ if choice == "1":
 
         choice = input(path13) 
         if choice == "1":
-            print("Layer 1.2") 
+            print(endings["1-3-1"]) 
         elif choice == "2":
-            print("Layer 1.2") 
+            print(endings["1-3-2"]) 
         elif choice == "3":
-            print("Layer 1.2") 
+            print(endings["1-3-3"])
         else:
             print("put error placeholder here")
 
     else:
         print("put error placeholder here")
 
-elif choice == "2": #Need Finishing
+elif choice == "2": #Need Finishing 
+    #20:47 2/26 - Nvm, im done with this shit
 
     choice = input(path2) 
     if choice == "1":
-        choice = input(path13) 
+        choice = input(path21) 
         if choice == "1":
-            print("Layer 1.2") 
+            print(endings["2-1-1"]) 
         elif choice == "2":
-            print("Layer 1.2") 
+            print(endings["2-1-2"]) 
         elif choice == "3":
-            print("Layer 1.2") 
+            print(endings["2-1-3"]) 
         else:
             print("put error placeholder here")
     elif choice == "2":
-        choice = input(path13) 
+        choice = input(path22) 
         if choice == "1":
-            print("Layer 1.2") 
+            print(endings["2-2-1"]) 
         elif choice == "2":
-            print("Layer 1.2") 
+            print(endings["2-2-2"]) 
         elif choice == "3":
-            print("Layer 1.2") 
+            print(endings["2-2-3"]) 
         else:
             print("put error placeholder here")
     elif choice == "3":
-        choice = input(path13) 
+        choice = input(path23) 
         if choice == "1":
-            print("Layer 1.2") 
+            print(endings["2-3-1"]) 
         elif choice == "2":
-            print("Layer 1.2") 
+            print(endings["2-3-2"]) 
         elif choice == "3":
-            print("Layer 1.2") 
+            print(endings["2-3-3"]) 
         else:
             print("put error placeholder here")
     else:
@@ -248,37 +256,36 @@ elif choice == "3":
 
     choice = input(path3) 
     if choice == "1":
-        choice = input(path13) 
+        choice = input(path31) 
         if choice == "1":
-            print("Layer 1.2") 
+            print(endings["3-1-1"]) 
         elif choice == "2":
-            print("Layer 1.2") 
+            print(endings["3-1-2"]) 
         elif choice == "3":
-            print("Layer 1.2") 
+            print(endings["3-1-3"]) 
         else:
             print("put error placeholder here")
     elif choice == "2":
-        choice = input(path13) 
+        choice = input(path32) 
         if choice == "1":
-            print("Layer 1.2") 
+            print(endings["3-2-1"]) 
         elif choice == "2":
-            print("Layer 1.2") 
+            print(endings["3-2-2"]) 
         elif choice == "3":
-            print("Layer 1.2") 
+            print(endings["3-2-3"]) 
         else:
             print("put error placeholder here")
     elif choice == "3":
-        choice = input(path13) 
+        choice = input(path33) 
         if choice == "1":
-            print("Layer 1.2") 
+            print(endings["3-3-1"]) 
         elif choice == "2":
-            print("Layer 1.2") 
+            print(endings["3-3-2"]) 
         elif choice == "3":
-            print("Layer 1.2") 
+            print(endings["3-3-3"]) #yep, that all. 
         else:
             print("put error placeholder here")
     else:
         print("put error placeholder here")
-
 else:
     print("put error placeholder here")
