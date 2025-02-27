@@ -6,6 +6,7 @@ from tkinter import ttk  # Import ttk for themed widgets (looks better)
 # (All your text1, startpoint, path1, path2, ..., endings dictionaries go here)
 text1 = "You stand at the edge of the scorching Sahara Desert. The wind whips sand around you, stinging your eyes. Legend speaks of the Lost Amulet of Zerzura, a powerful artifact hidden within a forgotten oasis. You, a seasoned explorer, are determined to find it. Before you lie three paths, shrouded in the swirling sands:"
 startpoint = """
+You stand at the edge of the scorching Sahara Desert. The wind whips sand around you, stinging your eyes. Legend speaks of the Lost Amulet of Zerzura, a powerful artifact hidden within a forgotten oasis. You, a seasoned explorer, are determined to find it. Before you lie three paths, shrouded in the swirling sands:
 1. Head straight into the dunes, following the faint tracks of a long-dead caravan.
 2. Search for a nearby Bedouin encampment, hoping to gain information from the locals.
 3. Climb the towering rock formation to your left, seeking a vantage point to survey the landscape.
@@ -98,6 +99,8 @@ You climb down and choose a path leading away from the rock formation, towards a
 """
 # Round 3 Endings (as a dictionary for easy access) and for who ever read this code,
 #i don't want to type out "path113 = "Blah Blah Blah" 27 time
+# Equation: Scene^Option = Ending
+# Very gud equation. 
 endings = {
     "1-1-1": "The journal reveals a secret passage! You find the Amulet, but a sandstorm traps you. You use the Amulet's power to survive, becoming a legend. (Ending 1: Legend)",
     "1-1-2": "You find some dried meat and water, but no Amulet. You survive, but your quest fails. (Ending 2: Survival)",
@@ -128,13 +131,13 @@ endings = {
     "3-3-3": "You realize the palms were a mirage and wander in the wrong direction, losing your way completely. (Ending 27: Mirage's Betrayal)",
 }
 
-# --- GUI and Game Logic ---
+# --- GUI and Game Logic --- 75% stackoverflow. No ai were abused in this code. 
 # https://docs.python.org/3/library/tk.html
 # fuck Goblin Tinkerer for turn my Zenith into a Broken Zenith
 class SaharaGame:
     def __init__(self, master):
         self.master = master
-        master.title("Sahara Adventure")
+        master.title("Ben_AdventureGame.py")
         master.geometry("800x600")  # Set a reasonable window size, good luck play on 4k
         master.configure(bg="#F0E68C")  # Desert-like background color also look like a old crap program from the past
 
@@ -145,7 +148,7 @@ class SaharaGame:
         self.text_area = tk.Text(master, wrap=tk.WORD, width=70, height=15, font=self.custom_font, bg="#F5F5DC", bd=5, relief=tk.GROOVE)  # Added border/relief
         self.text_area.pack(pady=20, padx=20, fill=tk.BOTH, expand=True) # Fill and expand
         self.text_area.insert(tk.END, text1)
-        self.text_area.config(state=tk.DISABLED)  # Make it read-only
+        self.text_area.config(state=tk.DISABLED)  # Make it read-only. 
 
 
         # --- Button Frame (for better layout) ---
@@ -191,6 +194,8 @@ class SaharaGame:
     def make_choice(self, choice):
         self.status_label.config(text="")  # Clear any previous status messages
 
+
+#Main Code
         # --- Decision Tree (using your original logic, but adapted) ---
         # Round 1
         if self.current_prompt == startpoint:
@@ -249,7 +254,7 @@ class SaharaGame:
                 self.show_error("Invalid choice.") #go fug yourself
 
         # --- Round 3 and Endings ---
-        elif self.current_prompt == path11:
+        elif self.current_prompt == path11: #meh, good enough
             self.display_ending(choice, "1-1")
         elif self.current_prompt == path12:
             self.display_ending(choice, "1-2")
@@ -269,7 +274,7 @@ class SaharaGame:
              self.display_ending(choice, "3-3")
         else:
             self.show_error("Unexpected game state. Please restart.") # Should not happen.
-
+#End of main code. 
     def display_ending(self, choice, base_path):
         ending_key = f"{base_path}-{choice}"
         if ending_key in endings:
