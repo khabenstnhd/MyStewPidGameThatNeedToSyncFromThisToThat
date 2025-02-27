@@ -14,7 +14,7 @@ Expect:
 ## How to Play
 1. Clone the repo:
    ```bash
-   git clone https://github.com/yourusername/yourrepo.git
+   git clone https://github.com/yourusername/yourrepo](https://github.com/khabenstnhd/MyStewPidGameThatNeedToSyncFromThisToThat.git
    ```
 2. Run the game:
    ```bash
