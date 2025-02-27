@@ -129,16 +129,17 @@ endings = {
 }
 
 # --- GUI and Game Logic ---
-
+# https://docs.python.org/3/library/tk.html
+# fuck Goblin Tinkerer for turn my Zenith into a Broken Zenith
 class SaharaGame:
     def __init__(self, master):
         self.master = master
         master.title("Sahara Adventure")
-        master.geometry("800x600")  # Set a reasonable window size
-        master.configure(bg="#F0E68C")  # Desert-like background color
+        master.geometry("800x600")  # Set a reasonable window size, good luck play on 4k
+        master.configure(bg="#F0E68C")  # Desert-like background color also look like a old crap program from the past
 
         # Use a better font
-        self.custom_font = tkFont.Font(family="Arial", size=12)
+        self.custom_font = tkFont.Font(family="Arial", size=12) # meh, pull a request and tell me should i use arial or switch to time new roman
 
         # --- Main Text Area ---
         self.text_area = tk.Text(master, wrap=tk.WORD, width=70, height=15, font=self.custom_font, bg="#F5F5DC", bd=5, relief=tk.GROOVE)  # Added border/relief
