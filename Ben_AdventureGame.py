@@ -97,7 +97,8 @@ Head directly towards the date palms, hoping for water and shade. (Leads to Roun
 Approach the date palms cautiously, wary of potential dangers. (Leads to Round 3, Path 3-3-2)
 Decide the palms are a mirage and head in a different direction. (Leads to Round 3, Path 3-3-3)
 """
-# Round 3 Endings (as a dictionary for easy access)
+# Round 3 Endings (as a dictionary for easy access) and for who ever read this code,
+#i don't want to type out "path113 = "Blah Blah Blah" 27 time
 endings = {
     "1-1-1": "The journal reveals a secret passage! You find the Amulet, but a sandstorm traps you. You use the Amulet's power to survive, becoming a legend. (Ending 1: Legend)",
     "1-1-2": "You find some dried meat and water, but no Amulet. You survive, but your quest fails. (Ending 2: Survival)",
@@ -170,13 +171,13 @@ if choice == "1":
 
         choice = input(path11) 
         if choice == "1":
-            print("Layer 1.2") 
+            print(endings["1-1-1"]) 
         elif choice == "2":
-            print("Layer 1.2") 
+            print(endings["1-1-2"]) 
         elif choice == "3":
-            print("Layer 1.2") 
+            print(endings["1-1-3"]) 
         else:
-            print("Error PlaceHolder")
+            print("put error placeholder here")
 
 
 
@@ -184,13 +185,13 @@ if choice == "1":
         
         choice = input(path12) 
         if choice == "1":
-            print("Layer 1.2") 
+            print(endings["1-2-1"]) 
         elif choice == "2":
-            print("Layer 1.2") 
+            print(endings["1-2-2"]) 
         elif choice == "3":
-            print("Layer 1.2") 
+            print(endings["1-2-3"]) 
         else:
-            print("Error PlaceHolder")
+            print("put error placeholder here")
 
     elif choice == "3":
 
@@ -202,34 +203,82 @@ if choice == "1":
         elif choice == "3":
             print("Layer 1.2") 
         else:
-            print("Error PlaceHolder")
+            print("put error placeholder here")
 
     else:
-        print("Error PlaceHolder")
+        print("put error placeholder here")
 
-elif choice == "2":
+elif choice == "2": #Need Finishing
 
     choice = input(path2) 
     if choice == "1":
-        print("Layer 1.2") 
+        choice = input(path13) 
+        if choice == "1":
+            print("Layer 1.2") 
+        elif choice == "2":
+            print("Layer 1.2") 
+        elif choice == "3":
+            print("Layer 1.2") 
+        else:
+            print("put error placeholder here")
     elif choice == "2":
-        print("Layer 1.2") 
+        choice = input(path13) 
+        if choice == "1":
+            print("Layer 1.2") 
+        elif choice == "2":
+            print("Layer 1.2") 
+        elif choice == "3":
+            print("Layer 1.2") 
+        else:
+            print("put error placeholder here")
     elif choice == "3":
-        print("Layer 1.2") 
+        choice = input(path13) 
+        if choice == "1":
+            print("Layer 1.2") 
+        elif choice == "2":
+            print("Layer 1.2") 
+        elif choice == "3":
+            print("Layer 1.2") 
+        else:
+            print("put error placeholder here")
     else:
-        print("Error PlaceHolder")
+        print("put error placeholder here")
 
 elif choice == "3":
 
     choice = input(path3) 
     if choice == "1":
-        print("Layer 1.2") 
+        choice = input(path13) 
+        if choice == "1":
+            print("Layer 1.2") 
+        elif choice == "2":
+            print("Layer 1.2") 
+        elif choice == "3":
+            print("Layer 1.2") 
+        else:
+            print("put error placeholder here")
     elif choice == "2":
-        print("Layer 1.2") 
+        choice = input(path13) 
+        if choice == "1":
+            print("Layer 1.2") 
+        elif choice == "2":
+            print("Layer 1.2") 
+        elif choice == "3":
+            print("Layer 1.2") 
+        else:
+            print("put error placeholder here")
     elif choice == "3":
-        print("Layer 1.2") 
+        choice = input(path13) 
+        if choice == "1":
+            print("Layer 1.2") 
+        elif choice == "2":
+            print("Layer 1.2") 
+        elif choice == "3":
+            print("Layer 1.2") 
+        else:
+            print("put error placeholder here")
     else:
-        print("Error PlaceHolder")
+        print("put error placeholder here")
 
 else:
-    print("Error PlaceHolder")
+    print("put error placeholder here")
