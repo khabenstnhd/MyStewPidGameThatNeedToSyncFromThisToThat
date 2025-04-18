@@ -3,7 +3,19 @@
 #Grammarly
 #https://www.grammarly.com
 #Grammarly makes AI writing convenient. Work smarter with personalized AI guidance and text generation on any app or website.
-
+#
+# 
+# 
+# 
+# Game story is on public domain, the publisher is anonymus, and i did stole the story. i still don't know who is the author is. and im, very suck
+# at making story, the political is by my dad, is this stuff in somewhere on a fandom i forgot. i just search for text adventure story.txt and this is the one show up. 
+# 
+# 
+# 
+# 
+# 
+# #####
+#
 #lol u got ads in source code 
 #Note, i can't just give this crap 3 ending. 
 # because its will be cod, or whatever it is, so, 

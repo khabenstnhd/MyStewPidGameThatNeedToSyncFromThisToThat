@@ -1,7 +1,7 @@
 import tkinter as tk
 import tkinter.font as tkFont
 from tkinter import ttk  # Import ttk for themed widgets (looks better)
-#YEAH, ITS FUCKING EASY TO PORT THE GAME.
+#YEAH, ITS EASY TO PORT THE GAME.
 # --- Game Data (from original code) ---
 # (All your text1, startpoint, path1, path2, ..., endings dictionaries go here)
 text1 = "You stand at the edge of the scorching Sahara Desert. The wind whips sand around you, stinging your eyes. Legend speaks of the Lost Amulet of Zerzura, a powerful artifact hidden within a forgotten oasis. You, a seasoned explorer, are determined to find it. Before you lie three paths, shrouded in the swirling sands:"
@@ -131,9 +131,13 @@ endings = {
     "3-3-3": "You realize the palms were a mirage and wander in the wrong direction, losing your way completely. (Ending 27: Mirage's Betrayal)",
 }
 
-# --- GUI and Game Logic --- 75% stackoverflow. No ai were abused in this code. 
+# --- GUI and Game Logic --- 75% stackoverflow.
 # https://docs.python.org/3/library/tk.html
 # fuck Goblin Tinkerer for turn my Zenith into a Broken Zenith
+# credit to https://www.youtube.com/watch?v=F-QjKc4aEIw this video for help me firgure out what the actual fuk im doing
+# the 3d model in the video up there kinda horror =))
+import colorsys #RGB BOIIII , i still don't know why i import it
+
 class SaharaGame:
     def __init__(self, master):
         self.master = master
@@ -196,7 +200,7 @@ class SaharaGame:
 
 
 #Main Code
-        # --- Decision Tree (using your original logic, but adapted) ---
+        # --- Decision Tree (using original logic, but adapted) ---
         # Round 1
         if self.current_prompt == startpoint:
             if choice == "1":
@@ -289,9 +293,9 @@ class SaharaGame:
         # Disable all buttons
         for button in self.buttons:
             button.config(state=tk.DISABLED)
-        self.status_label.config(text="Game Over.  Thanks for playing!") # A nice message
+        self.status_label.config(text="Game Over.  Thanks for playing!") # A nice message for who bored enough to read.
 
-        # Add a "Play Again" button
+        # Add a "Play Again" button for you to explored the game.
         play_again_button = ttk.Button(self.button_frame, text="Play Again", command=self.restart_game)
         play_again_button.grid(row=len(self.buttons) // 2, column=0, columnspan=2, pady=10)
         self.buttons.append(play_again_button)
@@ -303,7 +307,7 @@ class SaharaGame:
         self.update_text(text1)  # Show the initial text
         self.current_prompt = startpoint
         self.create_buttons(startpoint)  # Recreate initial buttons
-        self.status_label.config(text="")  # Clear status label
+        self.status_label.config(text="")  # Clear status label 
 
     def show_error(self, message):
         self.status_label.config(text=message)
